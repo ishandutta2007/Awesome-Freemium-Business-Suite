@@ -1,0 +1,171 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 380" width="100%" height="380" fill="none">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19" />
+      <stop offset="50%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#090d16" />
+    </linearGradient>
+
+    <!-- Title Gradient -->
+    <linearGradient id="title-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="35%" stop-color="#818cf8" />
+      <stop offset="70%" stop-color="#c084fc" />
+      <stop offset="100%" stop-color="#f472b6" />
+    </linearGradient>
+
+    <!-- Ambient Glow Gradients -->
+    <radialGradient id="glow-cyan" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="glow-purple" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.22" />
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="glow-rose" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f43f5e" stop-opacity="0.18" />
+      <stop offset="100%" stop-color="#f43f5e" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Filters -->
+    <filter id="subtle-blur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="50" />
+    </filter>
+
+    <!-- CSS Keyframe Animations -->
+    <style>
+      @keyframes ambientPulse {
+        0%, 100% { transform: scale(1) translate(0px, 0px); opacity: 0.65; }
+        50% { transform: scale(1.15) translate(25px, -15px); opacity: 0.95; }
+      }
+      @keyframes floatCardLeft {
+        0%, 100% { transform: translateY(0px) rotate(-1.5deg); }
+        50% { transform: translateY(-10px) rotate(-0.5deg); }
+      }
+      @keyframes floatCardRight {
+        0%, 100% { transform: translateY(0px) rotate(1.5deg); }
+        50% { transform: translateY(-9px) rotate(2.5deg); }
+      }
+      @keyframes flowStroke {
+        0% { stroke-dashoffset: 480; }
+        100% { stroke-dashoffset: 0; }
+      }
+      @keyframes pillBounce {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-5px); }
+      }
+
+      .pulse-cyan {
+        animation: ambientPulse 9s ease-in-out infinite alternate;
+        transform-origin: 220px 120px;
+      }
+      .pulse-purple {
+        animation: ambientPulse 11s ease-in-out infinite alternate-reverse;
+        transform-origin: 980px 240px;
+      }
+      .bg-decor-left {
+        animation: floatCardLeft 7s ease-in-out infinite;
+        transform-origin: 130px 190px;
+      }
+      .bg-decor-right {
+        animation: floatCardRight 8s ease-in-out infinite;
+        transform-origin: 1060px 190px;
+      }
+      .flow-grid {
+        stroke-dasharray: 20 12;
+        animation: flowStroke 24s linear infinite;
+      }
+      .top-pill {
+        animation: pillBounce 6s ease-in-out infinite;
+      }
+    </style>
+  </defs>
+
+  <!-- Canvas Container Box -->
+  <rect width="1200" height="380" rx="16" fill="url(#bg-grad)" stroke="#1e293b" stroke-width="1.5" />
+
+  <!-- Dynamic Ambient Glow Blobs (Placed deep behind in background) -->
+  <circle class="pulse-cyan" cx="240" cy="120" r="180" fill="url(#glow-cyan)" filter="url(#subtle-blur)" />
+  <circle class="pulse-purple" cx="960" cy="230" r="200" fill="url(#glow-purple)" filter="url(#subtle-blur)" />
+
+  <!-- Dynamic Animated Circuit / Flow Lines (Background) -->
+  <path class="flow-grid" d="M 0 170 Q 300 240 600 150 T 1200 210" stroke="#334155" stroke-width="1.2" stroke-opacity="0.35" fill="none" />
+  <path class="flow-grid" d="M 0 230 Q 360 130 720 250 T 1200 140" stroke="#6366f1" stroke-width="1" stroke-opacity="0.25" fill="none" />
+
+  <!-- Muted Background Visual Elements (Far Left & Far Right, strictly away from center text) -->
+  <!-- Left Side: CRM Metric Card Preview -->
+  <g class="bg-decor-left" opacity="0.45">
+    <rect x="42" y="75" width="160" height="96" rx="12" fill="#1e293b" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.4" />
+    <circle cx="70" cy="100" r="9" fill="#38bdf8" fill-opacity="0.25" />
+    <path d="M 66 100 L 74 100 M 70 96 L 70 104" stroke="#38bdf8" stroke-width="1.5" />
+    <text x="88" y="104" fill="#93c5fd" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700">CRM &amp; LEADS</text>
+    <rect x="60" y="124" width="75" height="6" rx="3" fill="#38bdf8" fill-opacity="0.6" />
+    <rect x="60" y="138" width="120" height="5" rx="2.5" fill="#475569" fill-opacity="0.6" />
+    <rect x="60" y="150" width="95" height="5" rx="2.5" fill="#475569" fill-opacity="0.4" />
+  </g>
+
+  <!-- Right Side: Open-Source Code Card Preview -->
+  <g class="bg-decor-right" opacity="0.45">
+    <rect x="998" y="200" width="160" height="98" rx="12" fill="#1e1b4b" stroke="#c084fc" stroke-width="1" stroke-opacity="0.4" />
+    <circle cx="1026" cy="225" r="9" fill="#c084fc" fill-opacity="0.25" />
+    <path d="M 1022 225 L 1030 225 M 1026 221 L 1026 229" stroke="#c084fc" stroke-width="1.5" />
+    <text x="1044" y="229" fill="#e9d5ff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700">FOSS STACK</text>
+    <rect x="1016" y="250" width="80" height="6" rx="3" fill="#c084fc" fill-opacity="0.6" />
+    <rect x="1016" y="264" width="125" height="5" rx="2.5" fill="#475569" fill-opacity="0.6" />
+    <rect x="1016" y="276" width="90" height="5" rx="2.5" fill="#475569" fill-opacity="0.4" />
+  </g>
+
+  <!-- ================= FOREGROUND HERO CONTENT (100% UNCLIPPED & IN FRONT) ================= -->
+  <!-- Top Category Badge Pill -->
+  <g class="top-pill" transform="translate(420, 48)">
+    <rect width="360" height="32" rx="16" fill="#1e293b" stroke="#6366f1" stroke-width="1.2" />
+    <circle cx="22" cy="16" r="4.5" fill="#22c55e" />
+    <text x="38" y="21" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" letter-spacing="1">CURATED DIRECTORY • 2026 EDITION</text>
+  </g>
+
+  <!-- Main Headline Title -->
+  <text x="600" y="152" text-anchor="middle" fill="url(#title-grad)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="44" font-weight="800" letter-spacing="-0.5">
+    Awesome Freemium Business Suite
+  </text>
+
+  <!-- Subtitle -->
+  <text x="600" y="196" text-anchor="middle" fill="#f1f5f9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="17" font-weight="500" letter-spacing="0.2">
+    Enterprise-Grade CRM, Project Management &amp; Collaboration Platforms for Growing Teams
+  </text>
+
+  <!-- Subtext Description -->
+  <text x="600" y="228" text-anchor="middle" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14.5" font-weight="400">
+    Verified Free-Forever Tiers • Transparent SaaS Starting Prices • 100% Self-Hosted Open-Source Stacks
+  </text>
+
+  <!-- Foreground Feature Badges at Bottom -->
+  <g transform="translate(165, 276)">
+    <!-- Pill 1: CRM -->
+    <g transform="translate(0, 0)">
+      <rect width="195" height="38" rx="19" fill="#1e293b" stroke="#334155" stroke-width="1.2" />
+      <text x="97" y="24" text-anchor="middle" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="600">⚡ Free-Tier CRM</text>
+    </g>
+
+    <!-- Pill 2: Project Management -->
+    <g transform="translate(210, 0)">
+      <rect width="225" height="38" rx="19" fill="#1e293b" stroke="#334155" stroke-width="1.2" />
+      <text x="112" y="24" text-anchor="middle" fill="#c084fc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="600">📊 Project Management</text>
+    </g>
+
+    <!-- Pill 3: Team Collaboration -->
+    <g transform="translate(450, 0)">
+      <rect width="205" height="38" rx="19" fill="#1e293b" stroke="#334155" stroke-width="1.2" />
+      <text x="102" y="24" text-anchor="middle" fill="#f472b6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="600">🤝 Team Workspace</text>
+    </g>
+
+    <!-- Pill 4: Open-Source Stacks -->
+    <g transform="translate(670, 0)">
+      <rect width="200" height="38" rx="19" fill="#1e293b" stroke="#334155" stroke-width="1.2" />
+      <text x="100" y="24" text-anchor="middle" fill="#34d399" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="600">🔓 Self-Hosted FOSS</text>
+    </g>
+  </g>
+</svg>
