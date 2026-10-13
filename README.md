@@ -8,7 +8,7 @@
 
 <p align="center">
   <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
-  <a href="https://github.com/ishandutta2007/Awesome-Freemium-Business-Suite/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Freemium-Business-Suite?style=flat-square&logo=github" alt="GitHub Stars" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Freemium-Business-Suite/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Freemium-Business-Suite?style=flat-square&logo=github" alt="GitHub_Stars" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Freemium-Business-Suite/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Freemium-Business-Suite?style=flat-square&logo=github" alt="GitHub Forks" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Freemium-Business-Suite/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square" alt="License" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Freemium-Business-Suite/pulls"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome" /></a>
@@ -68,7 +68,7 @@ The sector exhibits **moderate fragmentation with a bifurcated barbell distribut
 
 > [!TIP]  
 > Self-hosted solutions provide complete data sovereignty, zero per-seat licensing fees, and freedom from vendor lock-in.  
-> **Sorted descending by real-time GitHub Star count.** Click any star badge to inspect the repository stargazers.
+> **Sorted descending by real-time GitHub Stars_Count.** Click any Stars_Badge to inspect the repository stargazers.
 
 - **[AppFlowy](https://github.com/AppFlowy-IO/AppFlowy)** [![Stars](https://img.shields.io/github/stars/AppFlowy-IO/AppFlowy?style=social&color=white)](https://github.com/AppFlowy-IO/AppFlowy/stargazers) `AGPL-3.0`  
   Privacy-first open-source Notion alternative built with Flutter and Rust. Provides modular documents, multi-view databases (Kanban, Grid, Calendar), offline-first architecture, end-to-end encryption, and full self-hosting.
